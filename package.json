@@ -1,16 +1,16 @@
 {
   "name": "haskelly",
   "displayName": "Haskelly",
-  "description": "Complete support for casual and expert Haskell development.",
-  "version": "0.5.5",
+  "description": "Build and GHCi support for casual and expert Haskell development.",
+  "version": "0.6.0",
   "icon": "resources/icon.png",
-  "publisher": "UCL",
+  "publisher": "Smartnor",
   "repository": {
     "type": "git",
-    "url": "https://github.com/haskelly-dev/Haskelly"
+    "url": "https://github.com/Smartnor/Haskelly"
   },
   "bugs": {
-    "url": "https://github.com/haskelly-dev/Haskelly/issues"
+    "url": "https://github.com/Smartnor/Haskelly/issues"
   },
   "galleryBanner": {
     "color": "#8F4D8B",
@@ -20,14 +20,10 @@
     "vscode": "^1.5.0"
   },
   "categories": [
-    "Languages",
-    "Snippets"
+    "Programming Languages"
   ],
   "keywords": [
-    "intero",
     "haskell",
-    "highlight",
-    "snippets",
     "stack"
   ],
   "activationEvents": [
@@ -82,8 +78,7 @@
         "extensions": [
           ".hs",
           ".lhs"
-        ],
-        "configuration": "./languages/configurations/haskell.json"
+        ]
       },
       {
         "id": "cabal",
@@ -97,21 +92,10 @@
         "configuration": "./languages/configurations/cabal.json"
       }
     ],
-    "snippets": [
-      {
-        "language": "haskell",
-        "path": "./languages/snippets/haskell.json"
-      }
-    ],
     "configuration": {
       "type": "object",
       "title": "Haskelly configuration",
       "properties": {
-        "haskelly.codeCompletion": {
-          "type": "boolean",
-          "default": true,
-          "description": "Provide code completion."
-        },
         "haskelly.buttons.ghci": {
           "type": "boolean",
           "default": true,
@@ -161,16 +145,6 @@
           "type": "boolean",
           "default": false,
           "description": "Haskelly will reuse the currently opened terminal to run Stack commands."
-        },
-        "haskelly.snippets.important": {
-          "type": "boolean",
-          "default": false,
-          "description": "Hide code completion suggestion if there's a snippet."
-        },
-        "haskelly.snippets.custom": {
-          "type": "object",
-          "default": {},
-          "description": "Add your custom snippets following the appropiate syntax."
         }
       }
     }
@@ -183,7 +157,7 @@
   },
   "devDependencies": {
     "@types/mocha": "^2.2.48",
-    "@types/node": "^6.0.109",
+    "@types/node": "^6.14.10",
     "mocha": "^2.3.3",
     "typescript": "^2.8.3",
     "vscode": "^1.1.17"
