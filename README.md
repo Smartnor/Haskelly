@@ -1,38 +1,8 @@
 # Haskelly
 
-[Release notes](https://github.com/haskelly-dev/Haskelly/releases)  | [Roadmap](https://trello.com/b/vsMlLU4h/haskelly-features) | [Demo Video](https://www.youtube.com/watch?v=r3x64iz5xDk)
-
 `Haskelly` is a [Visual Studio Code](https://code.visualstudio.com/) extension that supports Haskell development.
 
 ## Features
-
-* __Code highlight__
-  - Haskell (`.hs` and `.lhs`) and Cabal via automatic dependency on [Haskell Syntax Highlighting](https://marketplace.visualstudio.com/items?itemName=justusadam.language-haskell).
-
-* __Code snippets__
-  - Structures : `data`, `newtype`, etc.
-  - Popular functions : `map`, `fold`, etc.
-
-
-* __Type hovers__
-    - ![hover](resources/hover.gif)
-
-
-* __Jump to definition__
-  - Jump to symbol definitions/declarations
-
-
-* __Find references__
-  - Find references within a module or depending modules. See limitations on [#62](https://github.com/haskelly-dev/Haskelly/issues/62)
-
-
-* __Code completion__ :
-    - Local functions and constants
-    - Standard library
-    - Imported modules
-
-    ![completion](resources/completion.gif)
-
 
 * __Integrated REPL, Build, Test and Run commands__
   - repl with `GHCi`
@@ -51,12 +21,6 @@
     curl -sSL https://get.haskellstack.org/ | sh
     ```
 
-  * Install [Intero](https://github.com/commercialhaskell/intero) (code completion and type information), [QuickCheck](https://hackage.haskell.org/package/QuickCheck) (test suite) and [stack-run](https://hackage.haskell.org/package/stack-run):
-
-    ```shell
-    stack install intero QuickCheck stack-run  # for a global installation
-    stack build intero QuickCheck stack-run # for a local installation
-    ```
 ### Note
 
 If you failed to install `stack-run`, please refer https://github.com/yamadapc/stack-run/issues/17#issuecomment-427545735
@@ -68,7 +32,6 @@ Haskelly is customizable
 
 | Parameter                     | Description                                     | Default  |
 |----------------------------   |-------------------------------------------------|----------|
-| `haskelly.codeCompletion`     | Code completion enabled                         | `true`   |  
 | `haskelly.buttons.ghci`       | `GHCi` button shows in the bottom bar           | `true`   |
 | `haskelly.buttons.runfile`    | `Run file` button shows in the bottom bar       | `true`   |
 | `haskelly.buttons.quickcheck` | `QuickCheck` button shows in the bottom bar     | `true`   |
@@ -78,8 +41,6 @@ Haskelly is customizable
 | `haskelly.buttons.stackRunParams` | Parameters passed to `stack run` command    | `null`   |
 | `haskelly.buttons.stackTest`  | `Stack test` button shows in the bottom bar     | `true`   |
 | `haskelly.buttons.stackTestParams` | Parameters passed to `stack test` command  | `null`   |
-| `haskelly.snippets.important` | Hide code completion for which there's already a snippet | `false` |
-| `haskelly.snippets.custom`    | Add your custom snippets following the structure of this [file](https://github.com/haskelly-dev/Haskelly/tree/master/languages/snippets/haskell.json)| `null` |
 | `haskelly.exec.reuseTerminal` | Reuse the currently opened terminal to run Stack commands | false |
 
 ## Contributing
