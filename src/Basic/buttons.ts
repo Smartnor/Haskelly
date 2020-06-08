@@ -34,6 +34,9 @@ function removeAllButtons() {
 function showButtons(context, buttonsConfig, isStack) {
     if (buttonsConfig) {
         const buttons = [];
+        if (buttonsConfig['ghcid'] === true ||  buttonsConfig['ghcid'] === undefined) {
+            buttons.push(['Run GHCid', 'editor.ghcid']);
+        }
         if (buttonsConfig['ghci'] === true ||  buttonsConfig['ghci'] === undefined) {
             buttons.push(['Load GHCi', 'editor.ghci']);
         }
@@ -63,10 +66,11 @@ function showButtons(context, buttonsConfig, isStack) {
         createButtons(context, buttons);
     } else {
         if (isStack) {
-            createButtons(context, [['Load GHCi', 'editor.ghci'], ['Stack Build', 'editor.stackBuild'],
+            createButtons(context, [['Run GHCid', 'editor.ghcid'], ['Load GHCi', 'editor.ghci'], ['Stack Build', 'editor.stackBuild'],
             ['Stack Run', 'editor.stackRun'], ['Stack Test', 'editor.stackTest']]);
         } else {
-            createButtons(context, [['Load GHCi', 'editor.ghci'], ['Run File', 'editor.runHaskell'], ['QuickCheck', 'editor.runQuickCheck']]);
+            createButtons(context, [['Run GHCid', 'editor.ghcid'], ['Load GHCi', 'editor.ghci'],
+            ['Run File', 'editor.runHaskell'], ['QuickCheck', 'editor.runQuickCheck']]);
         }
     }
 }

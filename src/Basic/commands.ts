@@ -27,6 +27,16 @@ function getTerminal(name) {
 }
 
 
+/* GHCid */
+function loadGHCid(extPath, src) {
+    const term = getTerminal('Haskell GHCid');
+    const folder = path.dirname(src);
+    const file = path.basename(src);
+    term.sendText(`cd "${folder}"`);
+    term.show();
+    term.sendText(`stack exec ghcid ${file}`);
+}
+
 /* GHCi */
 function loadGHCi(extPath, src) {
     const term = getTerminal('Haskell GHCi');
