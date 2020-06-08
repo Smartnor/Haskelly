@@ -151,6 +151,14 @@ export default function initCommands(context: vscode.ExtensionContext) {
     });
 
     /* Register Commands */
+    context.subscriptions.push(vscode.commands.registerTextEditorCommand('editor.ghcid', editor => {
+        editor.document.save()
+            .then(() => {
+                vscode.window.setStatusBarMessage('Loading module in GHCid...', 1000);
+                loadGHCid(context.extensionPath, editor.document.uri.fsPath);
+            });
+    }));
+
     context.subscriptions.push(vscode.commands.registerTextEditorCommand('editor.ghci', editor => {
         editor.document.save()
             .then(() => {
