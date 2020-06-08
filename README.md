@@ -5,6 +5,7 @@
 ## Features
 
 * __Integrated REPL, Build, Test and Run commands__
+  - ensure code correctness with `GHCid`
   - repl with `GHCi`
   - build with `stack`
   - run with `runHaskell`
@@ -13,7 +14,7 @@
 
 ## Installation
 
-  * Install the [Haskelly](https://marketplace.visualstudio.com/items?itemName=UCL.haskelly) VS Code extension.
+  * Install the [Haskelly](https://marketplace.visualstudio.com/items?itemName=Smartnor.haskelly) VS Code extension.
 
   * Install [Stack](https://www.haskellstack.org) and add it to your PATH. Note that Stack folder naming conventions must be followed for it to work correctly, i.e. capitalizing folder names.
 
@@ -32,6 +33,7 @@ Haskelly is customizable
 
 | Parameter                     | Description                                     | Default  |
 |----------------------------   |-------------------------------------------------|----------|
+| `haskelly.buttons.ghcid`      | `GHCid` button shows in the bottom bar          | `true`   |
 | `haskelly.buttons.ghci`       | `GHCi` button shows in the bottom bar           | `true`   |
 | `haskelly.buttons.runfile`    | `Run file` button shows in the bottom bar       | `true`   |
 | `haskelly.buttons.quickcheck` | `QuickCheck` button shows in the bottom bar     | `true`   |
