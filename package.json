@@ -29,6 +29,7 @@
   "activationEvents": [
     "onCommand:editor.runHaskell",
     "onCommand:editor.runQuickCheck",
+    "onCommand:editor.ghcid",
     "onCommand:editor.ghci",
     "onCommand:editor.stackTest",
     "onCommand:editor.stackRun",
@@ -45,6 +46,11 @@
       {
         "command": "editor.runQuickCheck",
         "title": "QuickCheck",
+        "category": "Haskell"
+      },
+      {
+        "command": "editor.ghcid",
+        "title": "Run GHCid",
         "category": "Haskell"
       },
       {
@@ -96,6 +102,11 @@
       "type": "object",
       "title": "Haskelly configuration",
       "properties": {
+        "haskelly.buttons.ghcid": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show the GHCid button."
+        },
         "haskelly.buttons.ghci": {
           "type": "boolean",
           "default": true,
